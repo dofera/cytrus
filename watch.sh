@@ -2,15 +2,25 @@
 
 readonly CYTRUS_URL="https://cytrus.cdn.ankama.com/cytrus.json"
 
-while true; do
-  watch --interval 60 --chgexit curl -s "${CYTRUS_URL}"
+main()
+{
+  while sleep 60; do
+    curl --silent "${CYTRUS_URL}" --output out
+    merge
+    [ -n "$(git status --short cytrus.json)" ] && push
+  done
+}
 
-  curl "${CYTRUS_URL}" --output out
+merge()
+{
   python3 jsonmerge.py cytrus.json out | jq > tmp && mv tmp cytrus.json
+}
 
-  git config user.name "$(gh api /users/"${GITHUB_ACTOR}" | jq .name -r)"
-  git config user.email "${GITHUB_ACTOR_ID}+${GITHUB_ACTOR}@users.noreply.github.com"
+push()
+{
   git add cytrus.json
-  git commit -m "Update cytrus.json"
+  git commit --message "Update cytrus.json"
   git push
-done
+}
+
+main "$@"
