@@ -7,14 +7,18 @@ on:
 
 env:
   GH_TOKEN: ${{ github.token }}
-  TERM: xterm
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
+
+      - name: Git configuration
+        run: |
+          git config user.name "$(gh api /users/"${GITHUB_ACTOR}" | jq --raw-output .name)"
+          git config user.email "${GITHUB_ACTOR_ID}+${GITHUB_ACTOR}@users.noreply.github.com"
 
       - name: Run script file
         run: sh watch.sh
