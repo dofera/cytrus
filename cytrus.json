@@ -2217,7 +2217,10 @@
       "gameId": 26,
       "assets": {
         "meta": {
-          "main": "f2badf46c897d6883d2656a8a40404ec3f393ec6"
+          "main": [
+            "6385536dab569efe0a55035a14d04019811f4b43",
+            "f2badf46c897d6883d2656a8a40404ec3f393ec6"
+          ]
         }
       },
       "platforms": {
