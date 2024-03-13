@@ -2217,7 +2217,11 @@
           "main": "f2badf46c897d6883d2656a8a40404ec3f393ec6"
         }
       },
-      "platforms": {}
+      "platforms": {
+        "windows": {
+          "main": "6.0_1.0.3"
+        }
+      }
     }
   }
 }
