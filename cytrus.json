@@ -2211,7 +2211,9 @@
       "order": 21,
       "gameId": 26,
       "assets": {
-        "meta": {}
+        "meta": {
+          "main": "f2badf46c897d6883d2656a8a40404ec3f393ec6"
+        }
       },
       "platforms": {}
     }
