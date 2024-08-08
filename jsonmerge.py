@@ -8,11 +8,11 @@ def llist(o) -> list:
     return o if isinstance(o, list) else [o]
 
 def merge(a, b) -> list:
-    s = sorted(set(a.keys()) | set(b.keys()))
+    s = natsorted(a.keys() | b.keys())
 
     for k in s:
         if k in a and k in b:
-            if type(a[k]) is dict and type(b[k]) is dict:
+            if isinstance(a[k], dict) and isinstance(b[k], dict):
                 a[k] = merge(a[k], b[k])
             elif a[k] != b[k]:
                 a[k] = natsorted(set(llist(a[k])) | set(llist(b[k])))

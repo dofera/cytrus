@@ -17,8 +17,11 @@ jobs:
 
       - name: Git configuration
         run: |
-          git config user.name "$(gh api /users/"${GITHUB_ACTOR}" | jq --raw-output .name)"
+          git config user.name "$(gh api "/users/${GITHUB_ACTOR}" | jq --raw-output .name)"
           git config user.email "${GITHUB_ACTOR_ID}+${GITHUB_ACTOR}@users.noreply.github.com"
+
+      - name: Python configuration
+        run: pip install natsort
 
       - name: Run script file
         run: sh watch.sh
