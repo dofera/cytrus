@@ -2,9 +2,10 @@
 
 import sys
 import json
+from natsort import natsorted
 
 def llist(o) -> list:
-    return o if type(o) is list else [o]
+    return o if isinstance(o, list) else [o]
 
 def merge(a, b) -> list:
     s = sorted(set(a.keys()) | set(b.keys()))
@@ -13,9 +14,8 @@ def merge(a, b) -> list:
         if k in a and k in b:
             if type(a[k]) is dict and type(b[k]) is dict:
                 a[k] = merge(a[k], b[k])
-            else:
-                if a[k] != b[k]:
-                    a[k] = sorted(set(llist(a[k])) | (set(llist(b[k]))))
+            elif a[k] != b[k]:
+                a[k] = natsorted(set(llist(a[k])) | set(llist(b[k])))
         elif k in b:
             a[k] = b[k]
     return a
