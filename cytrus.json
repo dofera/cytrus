@@ -12,6 +12,7 @@
       "assets": {
         "meta": {
           "beta": [
+            "8f4e8cb97101fb0b2daa7d6d4e824881e8408fbc",
             "1180f13293d5450096a0b379fc12f8537f795390",
             "9529a80afc986bde341ab929ae76aa7b60eb08dc",
             "d28d6cdb0550117ad7c88b88772ce110a7b1d0e3",
@@ -25,7 +26,8 @@
             "58fc09d3beda65033f9e55f12044cf3f09a26436",
             "70e144bdad23ad5d3540c44ddb2c70a56f77d2a0",
             "88b71e94353610f156a124ba5996afb09130cf23",
-            "7321e9c7d7e0ce99a68c8656216c1fba1c9deeae"
+            "7321e9c7d7e0ce99a68c8656216c1fba1c9deeae",
+            "ea0dfd6800fff7abaeef94fbc41d375fd707eee6"
           ]
         }
       },
