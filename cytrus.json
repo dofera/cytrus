@@ -21,6 +21,7 @@
           ],
           "main": [
             "3f551abf0f6f56febbbd2fd27350943f527e6056",
+            "4ba281c5f1c1e18f6a85563d60e024d5e95e94b1",
             "5e9ea7404690ca8a0f72bfaad155b1b3e42cf025",
             "6ab07ba032856d27da27e9a8155b8fe38f74323c",
             "8d6a163ef9c96bac3978b875f89c23a07c6d0c75",
@@ -30,7 +31,8 @@
             "7321e9c7d7e0ce99a68c8656216c1fba1c9deeae",
             "ea0dfd6800fff7abaeef94fbc41d375fd707eee6"
           ],
-          "beta_topush": "98fe607228e4c355bf21c213a68f6893009b3d3e"
+          "beta_topush": "98fe607228e4c355bf21c213a68f6893009b3d3e",
+          "dofus3": "8cabfafc223f9f53bc80dc4783639a037c8e4e7e"
         }
       },
       "platforms": {
