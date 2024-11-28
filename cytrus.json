@@ -33,7 +33,10 @@
             "ea0dfd6800fff7abaeef94fbc41d375fd707eee6"
           ],
           "beta_topush": "98fe607228e4c355bf21c213a68f6893009b3d3e",
-          "dofus3": "8cabfafc223f9f53bc80dc4783639a037c8e4e7e"
+          "dofus3": [
+            "4ab04f8fe69c496a58faa6435f982570bfe260e4",
+            "8cabfafc223f9f53bc80dc4783639a037c8e4e7e"
+          ]
         }
       },
       "platforms": {
