@@ -10,14 +10,14 @@ push() {
 }
 
 merge() {
-  python3 jsonmerge.py "$1" "$2" | jq > tmp && mv tmp "$1"
+  python3 jsonmerge.py "$1" "$2" | jq >tmp && mv tmp "$1"
 }
 
 main() {
   while sleep 60; do
     curl --silent "${CYTRUS_URL}/${CYTRUS_FILE}" --output out
     merge "${CYTRUS_FILE}" out
-    [ -n "$(git status --short "${CYTRUS_FILE}")" ] && push
+    [ -n "$(git status --short "${CYTRUS_FILE}")" ] && [ -s "${CYTRUS_FILE}" ] && push
   done
 }
 
