@@ -8,9 +8,7 @@ def llist(o) -> list:
     return o if isinstance(o, list) else [o]
 
 def merge(a, b) -> list:
-    s = natsorted(a.keys() | b.keys())
-
-    for k in s:
+    for k in natsorted(a.keys() | b.keys()):
         if k in a and k in b:
             if isinstance(a[k], dict) and isinstance(b[k], dict):
                 a[k] = merge(a[k], b[k])
