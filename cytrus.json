@@ -3158,7 +3158,11 @@
       "assets": {
         "meta": {}
       },
-      "platforms": {}
+      "platforms": {
+        "windows": {
+          "main": "6.0_1.3.1"
+        }
+      }
     }
   }
 }
