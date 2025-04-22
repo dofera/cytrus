@@ -3150,6 +3150,15 @@
           "main": "6.0_0.3.3-placeholder.1"
         }
       }
+    },
+    "maliki": {
+      "name": "maliki",
+      "order": 20,
+      "gameId": 31,
+      "assets": {
+        "meta": {}
+      },
+      "platforms": {}
     }
   }
 }
