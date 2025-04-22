@@ -3156,7 +3156,9 @@
       "order": 20,
       "gameId": 31,
       "assets": {
-        "meta": {}
+        "meta": {
+          "main": "7bdbf7fd310aa418c0b902fb13dec8b96daa323e"
+        }
       },
       "platforms": {
         "windows": {
